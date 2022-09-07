@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Author" content="Anil K. Vijendran" />
+    <title>导航页</title>
+    <style type="text/css">
+        table { width: 85%; }
+        tr { vertical-align: top; }
+        td.single { width: 15%; }
+        td.multi { width: 15%; }
+    </style>
+    <script>
+        window.onload = function(){
+            var elementsByClassName = document.getElementsByClassName("multi");
+            for(var i=0; i<elementsByClassName.length; i++){
+                var ele = elementsByClassName[i];
+                // 事件名称不以on开头；需传参时使用匿名函数
+                ele.addEventListener("mouseenter", function(){showsub(this, 1)});
+                ele.addEventListener("mouseleave", function(){showsub(this, 0)});
+            }
+        }
+        function showsub(ele, isShow) {
+            var submenu = ele.getElementsByTagName("ul")[0];
+            if (isShow) {
+                submenu.style.display = "block";
+            } else {
+                submenu.style.display = "none";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1>猪耳朵</h1>
+<table style="width: 50%;" >
+    <tr>
+        <td class="single" >
+            <a href="https://wiki.lazipig.com/index.action#all-updates" target="_blank">wiki</a>
+        </td>
+        <td class="single" >
+            <a href="https://zbox.lazipig.com/index.php?m=my&f=index" target="_blank">禅道</a>
+        </td>
+        <td class="single" >
+            <a href="https://jenkins.lazipig.com/" target="_blank">jenkins</a>
+        </td>
+        <td class="single" >
+            <a href="https://jumpserver.lazipig.com/users/first-login/" target="_blank">jumper</a>
+        </td>
+        <td class="single" >
+            <a href="http://devswg.pig-ear.com:81/doc.html" target="_blank">swagger</a>
+        </td>
+        <!--<td class="single" >
+            <a href="" target="_blank"></a>
+        </td>-->
+    </tr>
+    <tr>
+        <td class="multi" >
+            <a href="#">原型</a>
+            <ul style="display: none;">
+                <li><a href="https://yxt.lazipig.com/" target="_blank">未评审</a></li>
+                <li><a href="https://yxt-release.lazipig.com/" target="_blank">已评审</a></li>
+            </ul>
+        </td>
+        <!--  <td class="multi" >
+            <a href="#">ELK</a>
+            <ul style="display: none;">
+                <li><a href="" target="_blank">dev</a></li>
+                <li><a href="" target="_blank">test</a></li>
+                <li><a href="" target="_blank">online</a></li>
+            </ul>
+          </td>	-->
+        <td class="multi" >
+            <a href="#">总控</a>
+            <ul style="display: none;">
+                <li><a href="http://devadmin.pig-ear.com/login" target="_blank">dev</a></li>
+                <li><a href="http://testadmin.pig-ear.com/" target="_blank">test</a></li>
+                <li><a href="http://bugadmin.pig-ear.com/" target="_blank">bugfix</a></li>
+                <li><a href="https://ele.pig-ear.com" target="_blank">online</a></li>
+            </ul>
+        </td>
+        <td class="multi" >
+            <a href="#">商户后台</a>
+            <ul style="display: none;">
+                <li><a href="http://devm.pig-ear.com/login" target="_blank">dev</a></li>
+                <li><a href="http://testm.pig-ear.com/login" target="_blank">test</a></li>
+                <li><a href="http://bugm.pig-ear.com/" target="_blank">bugfix</a></li>
+                <li><a href="https://m.pig-ear.com" target="_blank">online</a></li>
+            </ul>
+        </td>
+        <td class="multi" >
+            <a href="#">渠道商H5</a>
+            <ul style="display: none;">
+                <li><a href="https://devh5.pig-ear.com" target="_blank">dev</a></li>
+                <li><a href="https://testh5.pig-ear.com" target="_blank">test</a></li>
+                <li><a href="https://bugh5.pig-ear.com" target="_blank">bugfix</a></li>
+                <li><a href="https://h5.pig-ear.com" target="_blank">online</a></li>
+            </ul>
+        </td>
+        <!--  <td class="multi" >
+            <a href="#"></a>
+            <ul style="display: none;">
+                <li><a href="" target="_blank"></a></li>
+                <li><a href="" target="_blank"></a></li>
+                <li><a href="" target="_blank"></a></li>
+                <li><a href="" target="_blank"></a></li>
+            </ul>
+          </td>	-->
+    </tr>
+
+</table>
+
+<h1>懒猪</h1>
+<table style="width: 50%;" >
+    <tr>
+        <td class="single" >
+            <a href="https://wiki.lazipig.com/index.action#all-updates" target="_blank">wiki</a>
+        </td>
+        <td class="single" >
+            <a href="https://zbox.lazipig.com/index.php?m=my&f=index" target="_blank">禅道</a>
+        </td>
+        <td class="single" >
+            <a href="https://jenkins.lazipig.com/" target="_blank">jenkins</a>
+        </td>
+        <td class="single" >
+            <a href="https://jumpserver.lazipig.com/users/first-login/" target="_blank">jumper</a>
+        </td>
+        <td class="single" >
+            <a href="http://devswg.lazipig.cn:81/doc.html" target="_blank">swagger</a>
+        </td>
+        <!--<td class="single" >
+            <a href="" target="_blank"></a>
+        </td>-->
+    </tr>
+    <tr>
+        <td class="multi" >
+            <a href="#">原型</a>
+            <ul style="display: none;">
+                <li><a href="https://yxt.lazipig.com/" target="_blank">未评审</a></li>
+                <li><a href="https://yxt-release.lazipig.com/" target="_blank">已评审</a></li>
+            </ul>
+        </td>
+        <td class="multi" >
+            <a href="#">ELK</a>
+            <ul style="display: none;">
+                <li><a href="http://develk.lazipig.cn:81/app/kibana#/home?_g=()" target="_blank">dev</a></li>
+                <li><a href="http://elk1.lazipig.com/app/kibana#/home?_g=()" target="_blank">online</a></li>
+            </ul>
+        </td>
+        <td class="multi" >
+            <a href="#">总控</a>
+            <ul style="display: none;">
+                <li><a href="http://admin.lazipig.cn/#/login" target="_blank">dev</a></li>
+                <li><a href="http://testadmin.lazipig.cn/#/login" target="_blank">test</a></li>
+                <li><a href="http://bugadmin.lazipig.cn/#/" target="_blank">bugfix</a></li>
+                <li><a href="https://admin.lazipig.com/#/" target="_blank">online</a></li>
+            </ul>
+        </td>
+        <td class="multi" >
+            <a href="#">运营公司</a>
+            <ul style="display: none;">
+                <li><a href="http://oc.lazipig.cn/#/login" target="_blank">dev</a></li>
+                <li><a href="http://testoc.lazipig.com/#/" target="_blank">test</a></li>
+                <li><a href="http://bugoc.lazipig.cn/#/" target="_blank">bugfix</a></li>
+                <li><a href="https://oc.lazipig.com/" target="_blank">online</a></li>
+            </ul>
+        </td>
+        <!--  
+		  td class="multi" >
+            <a href="#"></a>
+            <ul style="display: none;">
+                <li><a href="" target="_blank"></a></li>
+                <li><a href="" target="_blank"></a></li>
+                <li><a href="" target="_blank"></a></li>
+                <li><a href="" target="_blank"></a></li>
+            </ul>
+          </td>
+		  <td class="multi" >
+            <a href="#"></a>
+            <ul style="display: none;">
+                <li><a href="" target="_blank">dev</a></li>
+                <li><a href="" target="_blank">test</a></li>
+                <li><a href="" target="_blank">bugfix</a></li>
+                <li><a href="" target="_blank">online</a></li>
+            </ul>
+          </td>		  -->
+    </tr>
+
+</table>
+
+
+</body>
+</html>
